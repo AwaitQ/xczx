@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Mr.M
  * @version 1.0
  * @description TODO
- * @date 2023/2/11 15:44
+ * @date 2023/3/31 22:44
  */
 @Api(value = "课程信息管理接口",tags = "课程信息管理接口")
 @RestController
