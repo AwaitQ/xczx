@@ -1,9 +1,12 @@
 package com.xuecheng.content.api;
 
 import com.xuecheng.content.model.dto.CourseCategoryTreeDto;
-import io.swagger.annotations.Api;
+import com.xuecheng.content.service.CourseCategoryService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author Mr.M
@@ -14,8 +17,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CourseCategoryController {
-    @GetMapping("/course-cateory/tree-nodes")
-    public CourseCategoryTreeDto queryTreeNodes() {
-        return null;
+
+    String ROOT_NODE = "1";
+
+    @Autowired
+    CourseCategoryService categoryService;
+
+    @GetMapping("/course-category/tree-nodes")
+    public List<CourseCategoryTreeDto> queryTreeNodes() {
+        List<CourseCategoryTreeDto> courseCategoryTreeDtos = categoryService.queryTreeNodes("1");
+        return courseCategoryTreeDtos;
     }
 }
