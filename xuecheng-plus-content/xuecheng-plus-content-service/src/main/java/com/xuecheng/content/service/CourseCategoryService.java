@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * @author Mr.M
  * @version 1.0
- * @description TODO
+ * @description 课程分类相关接口
  * @date 2023/2/12 14:49
  */
 public interface CourseCategoryService {
